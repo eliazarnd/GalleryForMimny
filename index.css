@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url('./public/AAAE12.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+:root{
+    --generalWidth: 600px;
+    --btnWidth: 60px;
+}
+
+img{
+    width: var(--generalWidth);
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.imagen:hover{
+    transform: scale(50%);
+    transition: all 1s ease;
+}
+
+.imagen{
+    display: flex;
+    transition: all 1s ease;
+}
+
+.galeria{
+    width: var(--generalWidth);
+    overflow: hidden;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    top: 50%;
+    opacity: 0;
+}
+
+.galeria.is-active{
+    opacity: 1;
+    transition: all 2s ease;
+}
+
+.btn-container{
+    display:flex;
+    justify-content:center;
+    position: absolute;
+    top: 50%;
+    width:100%;
+    column-gap: calc(var(--generalWidth) + 50px);
+}
+
+.btn-action{
+    width: var(--btnWidth);
+}
+ .btn-action:hover{
+    cursor:pointer;
+    transform: scale(1.1);
+    transition: all 0.5s ease;
+}
+
+.fade-background{
+    position: absolute;
+    background-color: black;
+    width: 80%;
+    height: 80%;
+    left:50%;
+    transform: translateX(-50%)translateY(-50%);
+    top:50%;
+    opacity: 0.7;
+    border-radius: 10px;
+}
+
+
+
