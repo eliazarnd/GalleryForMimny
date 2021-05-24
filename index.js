@@ -9,62 +9,26 @@
   const $btnNext = document.getElementById("btn-action-next");
   const $currentImage = document.getElementById("current-img");
   const $galeria = document.getElementById("galeria");
+  
 const imagesJson =  [
-    {
-     "orden":1,
-     "source":"/VYMkc0s/ABCMUSEO_STUFFFF1.jpg"
-    },
-    {
-     "orden":2,
-     "source":"/fvQXH5g/AF1.jpg"
-    },
-    {
-        "orden":3,
-        "source":"/CnzTWZn/afcydh.jpg"
-    },
-    {
-        "orden":2,
-        "source":"/KKs4Wzs/Halloween_icon.jpg"
-    },
-    {
-        "orden":2,
-        "source":"/bFkFBWR/ICON-ANIMATION-FULL.gif"
-    }
+     "VYMkc0s/ABCMUSEO_STUFFFF1.jpg",
+     "fvQXH5g/AF1.jpg",
+    "CnzTWZn/afcydh.jpg",
+    "KKs4Wzs/Halloween_icon.jpg",
+    "bFkFBWR/ICON-ANIMATION-FULL.gif",
+    "8sVyX0X/AAAE12.jpg"
 ]
 
 let imagenHTML = "";
 imagesJson.forEach(function(imagen,index){
         
-    imagenHTML+=`<img class = "img-carrusel" width = "500px" heigth: "500px" src="${galeria+imagen.source}" alt="" data-pos = ${index} >`;
+    imagenHTML+=`<img class = "img-carrusel" width = "500px" heigth: "500px" src="${galeria+imagen}" alt="" data-pos = ${index} >`;
     
     dibujo.innerHTML=imagenHTML;
     //console.log(imagenHTML);
 });
 currentImages = document.querySelectorAll(".img-carrusel");
 finalPosition = currentImages.length;
- 
-
-  /* getImagesToRender().then(images => {
-    let imagenHTML = "";
-    images.forEach(function(imagen,index){
-        
-        imagenHTML+=`<img width = "500px" heigth: "500px" src="${galeria+imagen.source}" alt="" data-pos = ${index} >`;
-        
-        dibujo.innerHTML=imagenHTML;
-        //console.log(imagenHTML);
-    });
-    currentImages = document.querySelectorAll("img");
-    finalPosition = currentImages.length;
-  }) 
-
-
-
-
-    async function getImagesToRender(){
-        const imagesToRenderJson = await fetch("./images.json");
-        const images = imagesToRenderJson.json();
-        return images;
-    } */
     
     document.addEventListener("DOMContentLoaded", function(event) {
         $galeria.classList.add("is-active");
