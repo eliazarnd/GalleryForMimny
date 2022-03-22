@@ -5,6 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+     <script src="https://www.gstatic.com/firebasejs/8.5.0/firebase-storage.js"></script>     
+
 </head>
 <body>
     <div class="fade-background"></div>
@@ -17,5 +25,26 @@
         <img class = "btn-action" id = "btn-action-next" src="./public/FLECHA_RIGHT.png" alt="Right arrow">
     </div>
 </body>
-<script src="./index.js"></script>  
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCcTKW0bIda_cloi0waJLHMqPMM2_ckd9g",
+    authDomain: "mimny-app.firebaseapp.com",
+    projectId: "mimny-app",
+    storageBucket: "mimny-app.appspot.com",
+    messagingSenderId: "483465850729",
+    appId: "1:483465850729:web:22b3f64d1d6b290c6d97f8"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  console.log(firebaseConfig);
+</script>
+
+
+<script src="./index.js"></script>
+
+
+
+
 </html>
